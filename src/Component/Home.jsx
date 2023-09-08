@@ -8,7 +8,7 @@ export default function Home() {
     setLastStatus("Attack");
     const a=Math.round(Math.random()*10);
     if(currentScore+a>10){
-        setGameStatus("Won");
+        setGameStatus("You Won!!");
     }
         SetcurrentScore(currentScore=>currentScore+a);
         
@@ -17,7 +17,7 @@ export default function Home() {
     setLastStatus("Defend")
     const a=Math.round(Math.random()*10);
     if(currentScore-a<-10){
-        setGameStatus("Lost");
+        setGameStatus("You Lost!!");
     }
         SetcurrentScore(currentScore=>currentScore-a);
        
@@ -40,7 +40,7 @@ export default function Home() {
     const[gameStatus,setGameStatus]=useState('');
     const[lastStatus,setLastStatus]=useState('');
   return (
-    <>
+    <div style={{width:"100%",overflow:"hidden"}}>
      
     <div className="row text-white text-center">
     <hr></hr>
@@ -85,6 +85,6 @@ export default function Home() {
    
   </div>
   
-    </>
+    </div>
   )
 }
